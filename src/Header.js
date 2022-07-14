@@ -6,11 +6,14 @@ import AddBooks from './AddBooks'
 import { useState } from 'react'
 
 const Header = () => {
+  display = () =>{
 
+  }
   return (
+    
     <div className='header'>
       <h1 >Book store</h1>
-        <Button  />
+        <Button  onClick={display}/>
     </div>
   )
 }
