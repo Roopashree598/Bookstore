@@ -1,14 +1,17 @@
 import React from 'react'
 import './Home.css'
-
-const Home = ({title,author}) => {
+import { Link } from 'react-router-dom'
+const Home = ({book}) => {
   return (
     <div className='home'>
         <div className='home_info'>
-            <p>{title}</p>
-            <p className='author'>{author}</p>
-           
-            <button className='details'>details</button>
+            
+            <p>{book.title}</p>
+            <p className='author'>{book.author}</p>
+           <Link to='/Details'>
+           <button className='details' >details</button>
+           </Link>
+            
             
            
 
