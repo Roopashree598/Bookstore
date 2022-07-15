@@ -5,3 +5,15 @@
   margin-bottom: 25px;
 }
 
+.btn{
+  background-color: #003153;
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: gold;
+  font-family: inherit;
+  align-items: center;
+  max-width: 130px;
+  font-size: 25px;
+}

@@ -1,22 +1,29 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import './AddBooks.css'
+
 
 const AddBooks = () => {
-    
-   
   return (
-   
-        <form>
-            <div>
+        <div>
+          <div>
+            <Link className='btn' to='/'>Close
+            </Link>
+          </div>
+            <form className='add-form'>
+            <div className='form-control'>
             <label>Book  name</label>
             <input type= "text"/>
             </div>
-            <div>
-            <label>author  name</label>
+            <div className='form-control'>
+            <label>Author  name</label>
             <input type= "text"/>
             </div>
             <input type='submit' value='Save Task' className='btn btn-block' />
             
         </form>
+        </div>
+       
    
   )
 }

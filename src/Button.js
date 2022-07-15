@@ -1,13 +1,18 @@
-import React from 'react'
-import './Button.css'
-import './AddBooks.js'
-import AddBooks from './AddBooks.js'
+// import React from 'react'
+// import './Button.css'
+// import './AddBooks.js'
+// import AddBooks from './AddBooks.js'
 
-const Button = ({onClick}) => {
+// import { Link } from 'react-router-dom'
+// const Button = () => {
+//    return (
    
-  return (
-    <button onClick={onClick} className="btn">Add Books</button>
-  )
-}
+//         <div className='btn'>
+//        Add Books
+//        </div>
+    
+    
+//   )
+// }
 
-export default Button
+// export default Button
