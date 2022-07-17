@@ -3,24 +3,23 @@ import { Link } from 'react-router-dom'
 import './AddBooks.css'
 
 
-const AddBooks = (onAdd) => {
-  const [name,SetName]=useState('')
+const AddBooks = ({onAdd}) => {
+  const [title,SetName]=useState('')
   const [author,SetAuthor]=useState('') 
 
   const submit= (e)=> {
       e.preventDefault();
 
-      if (!name) {
-        alert('Please add a task')
+      if (!title) {
+        alert('Please enter book details')
         return
       }
   
-      onAdd({ name, author })
-  
+      onAdd({ title, author })
+        
       SetName('')
+        
       SetAuthor('')
-     
-
   }
 
   return (
@@ -31,12 +30,16 @@ const AddBooks = (onAdd) => {
           </div>
             <form className='add-form' onSubmit={submit}>
             <div className='form-control'>
-            <label value={name} onChange = {(e)=>SetName(e.target.value)}>Book  name</label>
-            <input type= "text"/>
+            <label >Book  name</label>
+            <input type= "text"
+            value={title} 
+            onChange = {(e)=>SetName(e.target.value)}/>
             </div>
             <div className='form-control'>
-            <label value={author} onChange ={(e) => SetAuthor(e.target.value)}>Author  name</label>
-            <input type= "text"/>
+            <label>Author  name</label>
+            <input type= "text"
+             value={author} 
+             onChange ={(e) => SetAuthor(e.target.value)}/>
             </div>
             <input type='submit' value='Save Book' className='btn btn-block' />
             

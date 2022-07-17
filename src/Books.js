@@ -9,12 +9,9 @@ const Books = ({books}) => {
           <div className="home_container">
               {books.map((book)=>(
                   <div className='books_row'>
-                      <Home key={book.id} book ={book}/>
-                         
-                      <Home key={book.id} book ={book}/>
-                   </div>
-              ))}
-                     
+                    <Home key={book.id} book ={book}/>
+                  </div>
+              ))} 
           </div>
       </div>
     </div>

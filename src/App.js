@@ -10,7 +10,7 @@ import Details from './Details';
 
 function App() {
   // const[showAddBooks ,setShowAddBooks]=useState(false)
-  
+ 
    const [books ,setBooks]=useState([
      {
      id: "9781593275846",
@@ -67,11 +67,17 @@ function App() {
      author: "Glenn Block, et al.",
      
    }]);
+   const addBooks =(book) =>{
+      const id = Math.floor(Math.random() * 10000) + 1
+      
+    const newBook = { id, ...book }
+    setBooks([...books, newBook])
+   }
+   const showDetails =(sid) =>{
+     {id.Books == sid? 'data=id.books' : ' '} 
+   }
   return (
-  
-
-   
-    <Router>
+      <Router>
         <div className="container">
         <Routes>
            <Route path='/' element={
@@ -84,24 +90,18 @@ function App() {
             } / >
             <Route path='/AddBooks' element={
             <>
-           
-               
-               {<AddBooks />}
+               {<AddBooks onAdd={addBooks}/>}
             </>
             } / >
 
             <Route path='/Details' element={
             <>
-           
-               
-               {<Details/>}
+               {<Details det={showDetails}/>}
             </>
             } / >
-            
-        </Routes>
-      </div>
-    </Router>
-    
+         </Routes>
+         </div>
+      </Router>
 );
 
 }
