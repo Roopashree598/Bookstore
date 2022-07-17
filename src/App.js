@@ -73,9 +73,9 @@ function App() {
     const newBook = { id, ...book }
     setBooks([...books, newBook])
    }
-   const showDetails =(sid) =>{
-     {id.Books == sid? 'data=id.books' : ' '} 
-   }
+  //  const showDetails =(sid) =>{
+  //    {id.Books == sid? 'data=id.books' : ' '} 
+  //  }
   return (
       <Router>
         <div className="container">
