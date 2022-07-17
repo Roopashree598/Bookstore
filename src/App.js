@@ -96,7 +96,7 @@ function App() {
 
             <Route path='/Details' element={
             <>
-               {<Details det={showDetails}/>}
+               {<Details />}
             </>
             } / >
          </Routes>
