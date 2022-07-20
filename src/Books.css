@@ -8,9 +8,10 @@
 
 .books_row{
     display: flex;
+    grid-template-columns: 50px 50px;
     z-index: 1;
     margin-left: 5px;
-    margin-right: 5px;
+    margin-right: 5px; 
     
 }
 
