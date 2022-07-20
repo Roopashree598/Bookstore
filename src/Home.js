@@ -12,7 +12,7 @@ const Home = ({book,showDet}) => {
             <p>{book.title}</p>
             <p className='author'>{book.author}</p>
             
-            <Link to='/Details/{book.id}' >
+            <Link to={`/Details/${book.id}`} >
             
            <button className='details' >details</button>
            </Link>

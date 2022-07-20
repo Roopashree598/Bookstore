@@ -5,17 +5,19 @@ import { Link } from 'react-router-dom'
 
 const Details = ({books}) => {
   
-  const [newItem,setB] = useState('');
+  const [bookDetails, setBookDetails] = useState({});
   let { id } = useParams();
-  console.log(id)
-  const filltered = () => {
-      const newItem = books.filter((newVal) => {return newVal.id === id;}
-    );
-    console.log(newItem)
-    setB(newItem);
+
+  const filltered = (id) => {
+    const newItem = books.filter((book) => {
+      return book.id.toString() === id;
+    });
+    setBookDetails(...newItem);
+    console.log(bookDetails)
   };
-    useEffect(() => {
-    filltered();
+
+  useEffect(() => {
+    filltered(id);
   }, [id]);
   return (
     <div>
@@ -24,8 +26,13 @@ const Details = ({books}) => {
           </Link>
       </div>
          <div>
-              {/* {books && books.filter ((book)=> book.id === id ).map ((book)=> book.author )} */}
-              <p>{newItem.title}</p>
+              {/* {books && books.filter ((book)=> book.id == id ).map ((book)=> book.author )} */}
+              <h3>{bookDetails.title}</h3>
+              <p>{bookDetails.author}</p>
+              <p>{bookDetails.published}</p>
+              <p>{bookDetails.publisher}</p>
+              <p>{bookDetails.pages}</p>
+              <p>{bookDetails.description}</p>
          </div>  
       </div>
   )
