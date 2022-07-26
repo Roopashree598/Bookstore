@@ -1,4 +1,5 @@
 import React from 'react'
+import './Detail.css'
 import { useParams } from 'react-router-dom'
 import { useState ,useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -6,7 +7,7 @@ import { Link } from 'react-router-dom'
 const Details = ({books}) => {
   
   const [bookDetails, setBookDetails] = useState({});
-  let { id } = useParams();
+  let { dog } = useParams();
 
   const filltered = (id) => {
     const newItem = books.filter((book) => {
@@ -17,23 +18,32 @@ const Details = ({books}) => {
   };
 
   useEffect(() => {
-    filltered(id);
-  }, [id]);
+    filltered(dog);
+  }, [dog]);
   return (
-    <div>
-      <div>
-          <Link className='btn' to='/'>Close
-          </Link>
-      </div>
-         <div>
+    <div className='detail_page'>
+      <div className='detail_row'>
+         <div className='detail_info'>
               {/* {books && books.filter ((book)=> book.id == id ).map ((book)=> book.author )} */}
               <h3>{bookDetails.title}</h3>
-              <p>{bookDetails.author}</p>
-              <p>{bookDetails.published}</p>
-              <p>{bookDetails.publisher}</p>
-              <p>{bookDetails.pages}</p>
+              <p><b>Author: </b>{bookDetails.author}</p>
               <p>{bookDetails.description}</p>
+              <p><b>Pages: </b>{bookDetails.pages} pg</p>
+              <p><b>Published By:  </b>{bookDetails.publisher} <b> On </b>{bookDetails.published}</p>
+              
+              
+              
          </div>  
+         <div className='detail_image'>
+         <img src={bookDetails.image} alt="" />
+         </div>  
+        
+         </div>
+         <div>
+          <Link  to='/'>
+            <button className='btn'> Close</button>
+          </Link>
+      </div>
       </div>
   )
 }

@@ -8,9 +8,10 @@ const Header = () => {
   return(
     <div className='header'>
     <h1 >Book store</h1>
-    {/* <h1>Add Books</h1> */}
-    <Link className="btn" to='/AddBooks'>
-      Add Books
+    
+    <Link to='/AddBooks'>
+    
+      <button  className='btn' >Add Books</button>
     </Link>
    </div>
    )

@@ -23,9 +23,10 @@ const AddBooks = ({onAdd}) => {
   }
 
   return (
-        <div>
+        <div className='addbooks_main'>
           <div>
-            <Link className='btn' to='/'>Close
+            <Link to='/'>
+              <button className='btn' >Close</button>
             </Link>
           </div>
             <form className='add-form' onSubmit={submit}>

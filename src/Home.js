@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
 import { Link } from 'react-router-dom'
-import { useHistory, useParams } from 'react-router-dom'
+
 
 const Home = ({book,showDet}) => {
   return (
@@ -10,11 +10,11 @@ const Home = ({book,showDet}) => {
         <div className='home_info'>
             
             <p>{book.title}</p>
-            <p className='author'>{book.author}</p>
+            <p className='author'>By {book.author}</p>
             
             <Link to={`/Details/${book.id}`} >
             
-           <button className='details' >details</button>
+           <button className='details' >Details</button>
            </Link>
             
             

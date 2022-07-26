@@ -8,12 +8,16 @@ const Books = ({books,showDet}) => {
     <div>
       <div className="books">
           <div className="home_container">
-              {books.map((book)=>(
+          {books.map((book)=>(
                   <div className='books_row'>
-                    <Home key={book.id} book ={book} showDet={showDet}/>
-                    
+                  
+                  
+                      <Home key={book.id} book ={book} showDet={showDet}/>
+                  
                   </div>
-              ))} 
+          ))} 
+                  
+
               
           </div>
       </div>

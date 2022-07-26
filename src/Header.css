@@ -1,17 +1,21 @@
 .header{
   display: flex;
+  
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
+  color: black;
+  background-color: grey;
 }
 
 .btn{
-  background-color: #003153;
+  background-color: black;
+  
   display: inline-block;
   border-radius: 5px;
   margin-top: 10px;
-  border-color: #a88734 #9c7e31 #846a29;
-  color: gold;
+  border-color: white;
+  color: white;
   font-family: inherit;
   align-items: center;
   max-width: 130px;
